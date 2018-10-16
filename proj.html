@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Расписание СПбГУ</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<style>
+		* {padding: 0; margin: 0}
+
+		#headOfpage {
+			background-color:#ff5d00;
+		}
+		
+		#underHead {
+			width: 75%;
+		}
+		
+		#cont1 {
+			width: 75%;
+		}
+		
+		#sections {
+			display: grid;
+			grid-template-columns:32% 32% 32%;
+			grid-gap: 2%;
+			grid-auto-rows: minmax(30px, auto);
+			justify-content: center;	
+			padding-bottom: 1em;
+			text-align: center;	
+		}
+
+		#sections > div {
+			background-color: #e5edf0;
+			border: 2px outset #bcc4c6;
+			border-radius: 5px 5px/5px 5px;
+			word-wrap: break-word;
+			padding-top: 15px;
+			padding-bottom: 3px;
+		}
+		
+		#firstSelect, #secSelect, #thirdSelect {
+			font-size:10pt;
+			width: auto;
+			overflow: auto;
+		}
+		
+		#main {
+			display: grid;
+			width: 75%;
+			border: 2px ridge #bcc4c6;
+			border-radius: 5px 5px/5px 5px;
+			grid-auto-rows: minmax(750px, auto);
+			grid-auto-columns: minmax(75%, auto);
+		}
+		
+		footer {
+			position: relative;
+			bottom: 0;
+			width: 100%;
+			height: 60px;
+			background-color: #e5edf0;
+			text-align: center;	
+			border-top: 2px outset #bcc4c6; 
+			margin-top: 10px;
+		}
+		
+	</style>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<nav id="headOfpage" class="navbar navbar-expand-lg">
+		<div class="container">
+			
+			<h3>
+				<a class="text-justify text-white" href="#">Расписание СПбГУ</a>
+			</h3>
+		</div>
+	</nav>
+	
+	<div id="underHead" class="container">
+		<ol class="breadcrumb">
+			<li>
+				<a style="color: #ff5d00" href="/">Главная</a>
+			</li>
+			<li>
+				<a style="white-space: pre; color:grey"> /</a> <a style="color: #ff5d00" href="/Analysis">Анализ расписания</a>
+			</li>
+		</ol>
+     </div>
+	
+	<div id="cont1" class="container">
+		<div id="sections" class="wrapper">
+			<div>
+				<p> Для студентов </p>
+				<form id="firstSelect" method="post">
+				   <p><select name="instruments[]">
+					<option disabled>Выберите инструмент</option>
+					<option value="Занятость конкретного кабинета">Занятость конкретного кабинета</option>
+					<option value="Список свободных кабинетов">Список свободных кабинетов</option>
+					<option value="Занятость определенных преподавателей">Занятость преподавателей</option>
+					<option selected value="Число пар по дням недели">Число пар по дням недели</option>
+					<option value="Число пар по конкретной дисциплине в семестре">Число пар по дисциплине в семестре</option>
+				   </select></p>
+				   <p><input type="submit" value="Отправить"></p>
+				</form>
+			</div>
+			<div>
+				<p> Для преподавателей </p>
+				<form id="secSelect" method="post">
+				   <p><select name="instruments[]">
+					<option disabled>Выберите инструмент</option>
+					<option value="Занятость конкретного кабинета">Занятость конкретного кабинета</option>
+					<option selected value="Список свободных кабинетов">Список свободных кабинетов</option>
+					<option value="Список вариантов пар для переноса занятий">Список вариантов пар для переноса</option>
+					<option value="Преподаватели, готовые заменить на время пары">Преподаватели для замены на время пары</option>
+					<option value="Число пар по дням недели">Число пар по дням недели</option>
+					<option value="Число пар по конкретной дисциплине в семестре">Число пар по дисциплине в семестре</option>
+				   </select></p>
+				   <p><input type="submit" value="Отправить"></p>
+				</form>
+			</div>
+			<div>
+				<p> Для диспетчеров и управлений СПбГУ </p>
+				<form id="thirdSelect" method="post">
+				   <p><select name="instruments[]">
+					<option disabled>Выберите инструмент</option>
+					<option value="Занятость конкретного кабинета">Занятость конкретного кабинета</option>
+					<option value="Список свободных кабинетов">Список свободных кабинетов</option>
+					<option selected value="Общая занятость зданий университета">Общая занятость зданий университета</option>
+					<option value="Занятость определенных преподавателей">Занятость преподавателей</option>
+					<option value="Занятость учебных групп">Занятость учебных групп</option>
+					<option value="Соотношение лекций и практик">Соотношение лекций и практик</option>
+				   </select></p>
+				   <p><input type="submit" value="Отправить"></p>
+				</form>
+			</div>
+		</div>
+	</div>
+		
+	<div id="main" class="container">
+		(Главная часть: графики, анализ...)
+	</div>
+
+	<footer>
+		<a href="https://github.com/spbu-schedule"> GitHub </a> <br>
+		<a href="https://trello.com/b/pJkZPoSt/shedule-spbu-mvp"> Trello </a>
+	</footer>
+	
+	
+</body>
+</html>
