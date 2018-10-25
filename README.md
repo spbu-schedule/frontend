@@ -15,7 +15,7 @@ Mail: polozhev@mail.ru
 
 [VK](https://vk.com/freakiller) | [GitHub](https://github.com/kosyachniy)
 
------
+---
 
 2. [Владимир Портнов](https://github.com/VPortnov) — Базы данных
 
@@ -27,7 +27,7 @@ Mail: st054630@student.spbu.ru
 
 [VK](https://vk.com/id323263866) | [GitHub](https://github.com/VPortnov)
 
------
+---
 
 3. [Егор Грехнёв](https://github.com/Egor14) — Анализ данных
 
