@@ -16,35 +16,6 @@
 			width: 75%;
 		}
 		
-		#cont1 {
-			width: 75%;
-		}
-		
-		#sections {
-			display: grid;
-			grid-template-columns:32% 32% 32%;
-			grid-gap: 2%;
-			grid-auto-rows: minmax(30px, auto);
-			justify-content: center;	
-			padding-bottom: 1em;
-			text-align: center;	
-		}
-
-		#sections > div {
-			background-color: #e5edf0;
-			border: 2px outset #bcc4c6;
-			border-radius: 5px 5px/5px 5px;
-			word-wrap: break-word;
-			padding-top: 15px;
-			padding-bottom: 3px;
-		}
-		
-		#firstSelect, #secSelect, #thirdSelect {
-			font-size:10pt;
-			width: auto;
-			overflow: auto;
-		}
-		
 		#main {
 			display: grid;
 			width: 75%;
@@ -74,11 +45,15 @@
 </head>
 
 <body>
-	<nav  class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+	<nav id="mainNavBar" class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
 		<div class="container">
 			<h3 class="navbar-brand" href="#">Расписание СПбГУ</h3>
-			<!-- Links -->
-			<div class="collapse navbar-collapse">
+			
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
 				<ul class="nav navbar-nav mr-auto">
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -124,10 +99,7 @@
 							<a class="dropdown-item" href="#">Задача 3</a>
 						</div>
 					</li>
-				</ul>
-				
-				
-   
+				</ul>   
 			</div>
 		</div>
 	</nav> 
@@ -135,62 +107,14 @@
 	<div id="underHead" class="container">
 		<ol class="breadcrumb">
 			<li>
-				<a style="color: #ff5d00" href="/">Главная</a>
+				<!-- <a style="color: #ff5d00" href="/">Главная</a> -->
+				<a href="/">Главная</a>
 			</li>
 			<li>
-				<a style="white-space: pre; color:grey"> /</a> <a style="color: #ff5d00" href="/Analysis">Анализ расписания</a>
+				<a style="white-space: pre; color:grey"> /</a> <a href="/Analysis">Анализ расписания</a>
 			</li>
 		</ol>
      </div>
-	
-	<div id="cont1" class="container">
-		<div id="sections" class="wrapper">
-			<div>
-				<p> Для студентов </p>
-				<form id="firstSelect" method="post">
-				   <p><select name="instruments[]">
-					<option disabled>Выберите инструмент</option>
-					<option value="Занятость конкретного кабинета">Занятость конкретного кабинета</option>
-					<option value="Список свободных кабинетов">Список свободных кабинетов</option>
-					<option value="Занятость определенных преподавателей">Занятость преподавателей</option>
-					<option selected value="Число пар по дням недели">Число пар по дням недели</option>
-					<option value="Число пар по конкретной дисциплине в семестре">Число пар по дисциплине в семестре</option>
-				   </select></p>
-				   <p><input type="submit" value="Отправить"></p>
-				</form>
-			</div>
-			<div>
-				<p> Для преподавателей </p>
-				<form id="secSelect" method="post">
-				   <p><select name="instruments[]">
-					<option disabled>Выберите инструмент</option>
-					<option value="Занятость конкретного кабинета">Занятость конкретного кабинета</option>
-					<option selected value="Список свободных кабинетов">Список свободных кабинетов</option>
-					<option value="Список вариантов пар для переноса занятий">Список вариантов пар для переноса</option>
-					<option value="Преподаватели, готовые заменить на время пары">Преподаватели для замены на время пары</option>
-					<option value="Число пар по дням недели">Число пар по дням недели</option>
-					<option value="Число пар по конкретной дисциплине в семестре">Число пар по дисциплине в семестре</option>
-				   </select></p>
-				   <p><input type="submit" value="Отправить"></p>
-				</form>
-			</div>
-			<div>
-				<p> Для диспетчеров и управлений СПбГУ </p>
-				<form id="thirdSelect" method="post">
-				   <p><select name="instruments[]">
-					<option disabled>Выберите инструмент</option>
-					<option value="Занятость конкретного кабинета">Занятость конкретного кабинета</option>
-					<option value="Список свободных кабинетов">Список свободных кабинетов</option>
-					<option selected value="Общая занятость зданий университета">Общая занятость зданий университета</option>
-					<option value="Занятость определенных преподавателей">Занятость преподавателей</option>
-					<option value="Занятость учебных групп">Занятость учебных групп</option>
-					<option value="Соотношение лекций и практик">Соотношение лекций и практик</option>
-				   </select></p>
-				   <p><input type="submit" value="Отправить"></p>
-				</form>
-			</div>
-		</div>
-	</div>
 		
 	<div id="main" class="container">
 		(Главная часть: графики, анализ...)
