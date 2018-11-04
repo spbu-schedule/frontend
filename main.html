@@ -21,16 +21,16 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			
-			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<div id="collapsibleNavbar" class="collapse navbar-collapse" >
 				<ul class="nav navbar-nav mr-auto">
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 							Аудитории
 						</a>
 						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#">Занятость</a>
-							<a class="dropdown-item" href="#">Свободные аудитории</a>
-							<a class="dropdown-item" href="#">Расписание аудитории</a>
+							<a class="dropdown-item" href="#" data-toggle="tooltip" title="Занятость конкретной аудитории в определенный промежуток времени">Занятость</a>
+							<a class="dropdown-item" href="#" data-toggle="tooltip" title="Список свободных аудиторий в определенный промежуток времени на факультете">Свободные аудитории</a>
+							<a class="dropdown-item" href="#" data-toggle="tooltip" title="Расписание конкретной аудитории">Расписание аудитории</a>
 						</div>
 					</li>
 					<li class="nav-item dropdown">
@@ -38,9 +38,9 @@
 							Преподаватели
 						</a>
 						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#">Преподаватели по дисциплине</a>
-							<a class="dropdown-item" href="#">Общая занятость</a>
-							<a class="dropdown-item" href="#">Занятость преподавателя</a>
+							<a class="dropdown-item" href="#" data-toggle="tooltip" title="Список преподавателей, обучающих выбранную группу/ведущих выбранну дисциплину">Преподаватели по дисциплине/группе</a>
+							<a class="dropdown-item" href="#" data-toggle="tooltip" title="Занятость преподавателей, обучающих выбранную группу/ведущих выбранну дисциплину">Общая занятость</a>
+							<a class="dropdown-item" href="#" data-toggle="tooltip" title="Занятость определенного преподавателя">Занятость преподавателя</a>
 						</div>
 					</li>
 
@@ -49,11 +49,12 @@
 							Учебные дисциплины
 						</a>
 						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#">Нагрузка по дням недели</a>
-							<a class="dropdown-item" href="#">Нагрузка по дисциплине</a>
-							<a class="dropdown-item" href="#">Количество пар в неделю</a>
-							<a class="dropdown-item" href="#">Соотношение лекций и практик</a>
-							<a class="dropdown-item" href="#">Занятость факультетов</a>
+							<a class="dropdown-item" href="#" data-toggle="tooltip" title="Количество занятий по дням недели для учебных групп">Нагрузка по дням недели</a>
+							<a class="dropdown-item" href="#" data-toggle="tooltip" title="Количество занятий конкретной дисциплины в семестре для учебных групп">Нагрузка по дисциплине</a>
+							<a class="dropdown-item" href="#" data-toggle="tooltip" title="Количество пар в неделю по дисциплинам">Количество пар в неделю</a>
+							<a class="dropdown-item" href="#" data-toggle="tooltip" title="Соотношение лекций и практик по дисциплинам учебных групп">Лекции/практики по предметам</a>
+							<a class="dropdown-item" href="#" data-toggle="tooltip" title="Общая занятость факультетов">Занятость факультетов</a>
+							<a class="dropdown-item" href="#" >Лекции/практики на факультете</a>
 						</div>
 					</li>		
 				</ul>
@@ -63,28 +64,23 @@
 						<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 							Задачи
 						</a>
-						<div class="dropdown-menu">
-							<a class="dropdown-item" href="#">Переставить пару</a>
-							<a class="dropdown-item" href="#">Занять аудиторию</a>
-							<a class="dropdown-item" href="#">Статистика по факультетам</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="right" title="выбор">Переставить пару</a>
+							<a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="right" title="выбор">Занять аудиторию</a>
+							<a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="right" title="выбор">Статистика по факультетам</a>
 						</div>
 					</li>
 				</ul>   
 			</div>
 		</div>
-	</nav> 
+	</nav>  
 	
 	<div id="underHead" class="container">
 		<ol class="breadcrumb">
-			<li>
-				<!-- <a style="color: #ff5d00" href="/">Главная</a> -->
-				<a href="/">Главная</a>
-			</li>
-			<li>
-				<a style="white-space: pre; color:grey"> /</a> <a href="/Analysis">Анализ расписания</a>
-			</li>
+			<li class="breadcrumb-item"><a href="">Главная</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Анализ расписания</li>
 		</ol>
-     </div>
+	</div>
 
 	<footer>
 		<a href="https://github.com/spbu-schedule"> GitHub </a> <br>
