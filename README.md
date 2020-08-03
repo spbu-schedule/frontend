@@ -57,8 +57,4 @@ Mail: grigor777001@yandex.ru
 
 Студент 3 курса, группа 16.Б12-пу
 
-Tel: +7 (922) 917-14-31
-
-Mail: egorglushkov2014@yandex.ru
-
-[VK](https://vk.com/exp98) | [GitHub](https://github.com/ExP98)
+[GitHub](https://github.com/ExP98)
